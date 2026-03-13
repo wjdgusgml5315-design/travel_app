@@ -1,0 +1,96 @@
+/* Card Block */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:active {
+  transform: scale(0.99);
+}
+
+/* Trip Card */
+.card--trip {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 200px;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-16);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  color: var(--color-surface);
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: var(--weight-bold);
+}
+
+.card__subtitle {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Schedule / Place Card */
+.card--place {
+  width: 100%;
+  padding: var(--spacing-16);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-12);
+  margin-bottom: 0;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-soft);
+}
+
+.card__thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-m);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card__body {
+  flex: 1;
+}
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+}
+
+.card__name {
+  font-size: 16px;
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.card__desc {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+/* Dashboard Featured Card */
+.card--featured {
+  padding: var(--spacing-20);
+  background: var(--color-primary);
+  color: var(--color-surface);
+}

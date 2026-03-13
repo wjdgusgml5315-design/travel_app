@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 만들기 - TripFlow</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <button class="button--icon" onclick="history.back()"><span class="material-icons-round">arrow_back</span></button>
+            <h1 class="header__title" style="flex:1; text-align:center; margin-right:40px;">여행 만들기</h1>
+        </header>
+
+        <!-- Form Sections -->
+        <main class="section">
+            <!-- City Selection -->
+            <div style="margin-bottom: var(--spacing-28);">
+                <label class="section__title" style="display:block;">어디로 떠나시나요?</label>
+                <div class="search-bar">
+                    <input type="text" class="search-bar__input" placeholder="도시 또는 국가 검색">
+                    <span class="material-icons-round search-bar__icon">location_on</span>
+                </div>
+                <div class="chip-group" style="margin-top: var(--spacing-12);">
+                    <div class="chip chip--active">제주</div>
+                    <div class="chip">서울</div>
+                    <div class="chip">도쿄</div>
+                    <div class="chip">오사카</div>
+                </div>
+            </div>
+
+            <!-- Date Selection -->
+            <div style="margin-bottom: var(--spacing-28);">
+                <label class="section__title" style="display:block;">언제 떠나시나요?</label>
+                <div class="input-field" style="display:flex; align-items:center; gap:var(--spacing-12);">
+                    <span class="material-icons-round" style="color:var(--color-primary);">calendar_today</span>
+                    <span>날짜를 선택해주세요</span>
+                </div>
+            </div>
+
+            <!-- Companion Selection -->
+            <div style="margin-bottom: var(--spacing-28);">
+                <label class="section__title" style="display:block;">누구와 함께 하나요?</label>
+                <div class="chip-group">
+                    <div class="chip">혼자</div>
+                    <div class="chip chip--active">친구와</div>
+                    <div class="chip">연인과</div>
+                    <div class="chip">가족과</div>
+                    <div class="chip">반려동물</div>
+                </div>
+            </div>
+
+            <!-- Style Selection -->
+            <div style="margin-bottom: var(--spacing-32);">
+                <label class="section__title" style="display:block;">어떤 스타일의 여행인가요?</label>
+                <div class="chip-group">
+                    <div class="chip chip--active">#감성숙소</div>
+                    <div class="chip">#맛집탐방</div>
+                    <div class="chip">#힐링</div>
+                    <div class="chip">#액티비티</div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <button class="button--primary button--large" onclick="location.href='dashboard.html'">여행 시작하기</button>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="bottom-nav__item" data-screen="index">
+                <span class="material-icons-round bottom-nav__icon">home</span>
+                <span>홈</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="create">
+                <span class="material-icons-round bottom-nav__icon">add_circle_outline</span>
+                <span>여행 만들기</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="dashboard">
+                <span class="material-icons-round bottom-nav__icon">dashboard</span>
+                <span>대시보드</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="record">
+                <span class="material-icons-round bottom-nav__icon">auto_stories</span>
+                <span>기록</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="my-page">
+                <span class="material-icons-round bottom-nav__icon">person</span>
+                <span>마이</span>
+            </button>
+        </nav>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

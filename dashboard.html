@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대시보드 - TripFlow</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="header__title">제주도 감성 여행</h1>
+            <div class="header__actions">
+                <button class="button--icon"><span class="material-icons-round">settings</span></button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Trip Status Card -->
+            <section class="section">
+                <div class="card card--featured">
+                    <p style="font-size: 14px; opacity: 0.9; margin-bottom: 4px;">D-10 여행 준비 중</p>
+                    <h2 style="font-size: 22px; margin-bottom: 12px;">꿈꾸던 제주에서의 3박 4일</h2>
+                    <div style="display: flex; gap: var(--spacing-16);">
+                        <div style="text-align: center;">
+                            <p style="font-size: 11px; opacity: 0.8;">방문 예정</p>
+                            <p style="font-size: 18px; font-weight: var(--weight-bold);">12곳</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <p style="font-size: 11px; opacity: 0.8;">체크리스트</p>
+                            <p style="font-size: 18px; font-weight: var(--weight-bold);">5/8</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Action Grid -->
+            <section class="section" style="padding-top: 0;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-12);">
+                    <button class="card" style="padding: var(--spacing-16); text-align: left;" onclick="location.href='schedule.html'">
+                        <span class="material-icons-round" style="color:var(--color-primary); margin-bottom:8px;">event_note</span>
+                        <h4 style="font-size: 15px;">전체 일정</h4>
+                    </button>
+                    <button class="card" style="padding: var(--spacing-16); text-align: left;" onclick="location.href='map.html'">
+                        <span class="material-icons-round" style="color:#FF5D5D; margin-bottom:8px;">map</span>
+                        <h4 style="font-size: 15px;">여행 지도</h4>
+                    </button>
+                </div>
+            </section>
+
+          <!-- Today's Highlights -->
+<section class="section">
+  <div class="u-flex-between">
+    <h2 class="section__title">오늘의 주요 일정</h2>
+    <button class="button--ghost button--small" onclick="location.href='schedule.html'">더보기</button>
+  </div>
+
+  <div class="schedule-list">
+    <article class="card card--place">
+      <img
+        src="https://images.unsplash.com/photo-1590424748043-4dc975bbbd80?auto=format&fit=crop&w=200&q=80"
+        alt="함덕 해수욕장"
+        class="card__thumb"
+      >
+      <div class="card__body">
+        <h4 class="card__name">함덕 해수욕장</h4>
+        <p class="card__desc">오전 10:00 • 관광지</p>
+      </div>
+      <span class="material-icons-round" style="color: var(--color-success);">check_circle</span>
+    </article>
+
+    <article class="card card--place">
+      <img
+        src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=200&q=80"
+        alt="델문도 카페"
+        class="card__thumb"
+      >
+      <div class="card__body">
+        <h4 class="card__name">델문도 카페</h4>
+        <p class="card__desc">오후 11:30 • 카페</p>
+      </div>
+      <span class="material-icons-round" style="color: var(--color-text-tertiary);">radio_button_unchecked</span>
+    </article>
+  </div>
+</section>
+
+            <!-- Memo / Checklist -->
+            <section class="section">
+                <h2 class="section__title">메모 & 체크리스트</h2>
+                <div class="card" style="padding: var(--spacing-16);">
+                    <ul style="display: flex; flex-direction: column; gap: 12px;">
+                        <li style="display:flex; align-items:center; gap:8px; font-size:14px;">
+                            <span class="material-icons-round" style="font-size:20px; color:var(--color-text-tertiary);">check_box_outline_blank</span>
+                            해변용 돗자리 챙기기
+                        </li>
+                        <li style="display:flex; align-items:center; gap:8px; font-size:14px; text-decoration:line-through; color:var(--color-text-tertiary);">
+                            <span class="material-icons-round" style="font-size:20px; color:var(--color-primary);">check_box</span>
+                            렌터카 예약 확인
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="bottom-nav__item" data-screen="index">
+                <span class="material-icons-round bottom-nav__icon">home</span>
+                <span>홈</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="create">
+                <span class="material-icons-round bottom-nav__icon">add_circle_outline</span>
+                <span>여행 만들기</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="dashboard">
+                <span class="material-icons-round bottom-nav__icon">dashboard</span>
+                <span>대시보드</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="record">
+                <span class="material-icons-round bottom-nav__icon">auto_stories</span>
+                <span>기록</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="my-page">
+                <span class="material-icons-round bottom-nav__icon">person</span>
+                <span>마이</span>
+            </button>
+        </nav>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripFlow - 함께하는 여행의 시작</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="header__title">TripFlow</h1>
+            <div class="header__actions">
+                <button class="button--icon"><span class="material-icons-round">notifications</span></button>
+                <button class="button--icon" onclick="location.href='my-page.html'"><span class="material-icons-round">account_circle</span></button>
+            </div>
+        </header>
+
+        <!-- Search Bar -->
+        <section class="section">
+            <div class="search-bar">
+                <input type="text" class="search-bar__input" placeholder="어디로 여행을 떠나시나요?">
+                <span class="material-icons-round search-bar__icon">search</span>
+            </div>
+        </section>
+
+        <!-- Active Trip Section -->
+        <section class="section">
+            <h2 class="section__title">진행 중인 여행</h2>
+            <article class="card card--trip" onclick="location.href='dashboard.html'">
+                <img src="https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=800&q=80" alt="제주도" class="card__image">
+                <div class="card__content">
+                    <h3 class="card__title">제주도 감성 여행</h3>
+                    <p class="card__subtitle">2026.04.10 - 04.13</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- My Trips List -->
+        <section class="section">
+            <div class="u-flex-between">
+                <h2 class="section__title">내 여행 리스트</h2>
+                <button class="button--ghost button--small">전체보기</button>
+            </div>
+            <div class="chip-group">
+                <div class="chip chip--active">예정된 여행</div>
+                <div class="chip">다녀온 여행</div>
+                <div class="chip">저장한 장소</div>
+            </div>
+            <div style="margin-top: var(--spacing-16);">
+                <article class="card card--place">
+                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=200&q=80" alt="도쿄" class="card__thumb">
+                    <div class="card__body">
+                        <h4 class="card__name">도쿄 맛집 탐방</h4>
+                        <p class="card__desc">2026.05.20 - 05.24</p>
+                    </div>
+                    <span class="material-icons-round" style="color: var(--color-text-tertiary);">chevron_right</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Recommended Section -->
+        <section class="section">
+            <h2 class="section__title">추천 여행지</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-12);">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=400&q=80" alt="파리" style="width:100%; height:120px; object-fit:cover;">
+                    <div style="padding: var(--spacing-12);">
+                        <h4 style="font-size: 14px; font-weight: var(--weight-semibold);">파리 낭만 여행</h4>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=400&q=80" alt="뉴욕" style="width:100%; height:120px; object-fit:cover;">
+                    <div style="padding: var(--spacing-12);">
+                        <h4 style="font-size: 14px; font-weight: var(--weight-semibold);">뉴욕 도시 탐험</h4>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="bottom-nav__item" data-screen="index">
+                <span class="material-icons-round bottom-nav__icon">home</span>
+                <span>홈</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="create">
+                <span class="material-icons-round bottom-nav__icon">add_circle_outline</span>
+                <span>여행 만들기</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="dashboard">
+                <span class="material-icons-round bottom-nav__icon">dashboard</span>
+                <span>대시보드</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="record">
+                <span class="material-icons-round bottom-nav__icon">auto_stories</span>
+                <span>기록</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="my-page">
+                <span class="material-icons-round bottom-nav__icon">person</span>
+                <span>마이</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

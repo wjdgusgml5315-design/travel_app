@@ -1,0 +1,56 @@
+/* Chip Block */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: var(--weight-medium);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: var(--shadow-soft);
+}
+
+.chip--active {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+/* Hover State */
+.chip:hover {
+  background-color: #F0F2FF;
+  border-color: var(--color-primary-soft);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
+}
+
+.chip--active:hover {
+  background-color: var(--color-primary-strong);
+}
+
+/* Press State */
+.chip:active {
+  background-color: var(--color-primary-soft);
+  transform: translateY(0) scale(0.96);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.chip--active:active {
+  background-color: #3D53D9;
+  transform: translateY(0) scale(0.96);
+}
+
+/* Chip Group Block */
+.chip-group {
+  display: flex;
+  gap: var(--spacing-8);
+  overflow-x: auto;
+  padding: 4px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chip-group::-webkit-scrollbar {
+  display: none;
+}

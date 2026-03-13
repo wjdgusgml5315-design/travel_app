@@ -1,0 +1,61 @@
+/* Button Block */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-12) var(--spacing-24);
+  border-radius: var(--radius-m);
+  font-weight: var(--weight-semibold);
+  font-size: 16px;
+  transition: all 0.2s ease;
+  gap: var(--spacing-8);
+  white-space: nowrap;
+}
+
+/* Modifier: Primary */
+.button--primary {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.button--primary:active {
+  background-color: var(--color-primary-strong);
+  transform: scale(0.98);
+}
+
+/* Modifier: Secondary */
+.button--secondary {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.button--secondary:active {
+  background-color: #CBD6FF;
+  transform: scale(0.98);
+}
+
+/* Modifier: Ghost */
+.button--ghost {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+}
+
+/* Modifier: Icon Only */
+.button--icon {
+  padding: var(--spacing-8);
+  border-radius: var(--radius-pill);
+}
+
+/* Modifier: Large (CTA) */
+.button--large {
+  width: 100%;
+  padding: var(--spacing-16);
+  border-radius: var(--radius-l);
+  font-size: 18px;
+}
+
+/* Modifier: Small */
+.button--small {
+  padding: var(--spacing-8) var(--spacing-16);
+  font-size: 14px;
+}

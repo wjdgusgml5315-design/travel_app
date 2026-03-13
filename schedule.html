@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일정 관리 - TripFlow</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <style>
+        .timeline { position: relative; padding-left: 20px; }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--color-primary-soft);
+        }
+        .timeline__item { position: relative; margin-bottom: 24px; }
+        .timeline__dot {
+            position: absolute;
+            left: -24px;
+            top: 20px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--color-primary);
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <button class="button--icon" onclick="history.back()"><span class="material-icons-round">arrow_back</span></button>
+            <h1 class="header__title" style="flex:1; text-align:center;">일정 관리</h1>
+            <button class="button--icon"><span class="material-icons-round">edit</span></button>
+        </header>
+
+        <!-- Day Tabs -->
+        <div class="section" style="padding-bottom:0;">
+            <div class="chip-group">
+                <div class="chip chip--active">Day 1 (4/10)</div>
+                <div class="chip">Day 2 (4/11)</div>
+                <div class="chip">Day 3 (4/12)</div>
+                <div class="chip">Day 4 (4/13)</div>
+            </div>
+        </div>
+
+        <!-- Schedule Content -->
+        <main class="section">
+            <div class="timeline">
+                <!-- Item 1 -->
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <p style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">10:00</p>
+                    <article class="card card--place">
+                        <img src="https://images.unsplash.com/photo-1590424748043-4dc975bbbd80?auto=format&fit=crop&w=200&q=80" alt="장소" class="card__thumb">
+                        <div class="card__body">
+                            <h4 class="card__name">함덕 해수욕장</h4>
+                            <p class="card__desc">함덕의 푸른 바다 산책</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <p style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">11:30</p>
+                    <article class="card card--place">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=200&q=80" alt="장소" class="card__thumb">
+                        <div class="card__body">
+                            <h4 class="card__name">델문도 카페</h4>
+                            <p class="card__desc">유명한 오션뷰 베이커리 카페</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- AI Suggestion Placeholder -->
+                <div style="margin-top: var(--spacing-32); padding: var(--spacing-16); border: 2px dashed var(--color-primary-soft); border-radius: var(--radius-l); text-align: center; background-color: rgba(220, 229, 255, 0.2);">
+                    <span class="material-icons-round" style="color:var(--color-primary); font-size:32px; margin-bottom:8px;">auto_awesome</span>
+                    <h4 style="font-weight: var(--weight-bold); margin-bottom:4px;">AI 다음 장소 추천</h4>
+                    <p style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 12px;">주변의 #인스타감성 맛집을 추천해드려요</p>
+                    <button class="button--primary button--small">추천 결과 보기</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Action Button -->
+        <div style="position: fixed; bottom: 100px; right: 20px; z-index: 100;">
+            <button class="button--primary button--icon" style="width: 56px; height: 56px; box-shadow: var(--shadow-medium);"><span class="material-icons-round" style="font-size:32px;">add</span></button>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="bottom-nav__item" data-screen="index">
+                <span class="material-icons-round bottom-nav__icon">home</span>
+                <span>홈</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="create">
+                <span class="material-icons-round bottom-nav__icon">add_circle_outline</span>
+                <span>여행 만들기</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="dashboard">
+                <span class="material-icons-round bottom-nav__icon">dashboard</span>
+                <span>대시보드</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="record">
+                <span class="material-icons-round bottom-nav__icon">auto_stories</span>
+                <span>기록</span>
+            </button>
+            <button class="bottom-nav__item" data-screen="my-page">
+                <span class="material-icons-round bottom-nav__icon">person</span>
+                <span>마이</span>
+            </button>
+        </nav>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

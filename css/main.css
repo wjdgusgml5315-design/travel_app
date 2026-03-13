@@ -1,0 +1,43 @@
+@import 'variables.css';
+@import 'reset.css';
+@import 'components/buttons.css';
+@import 'components/cards.css';
+@import 'components/nav.css';
+@import 'components/inputs.css';
+@import 'components/chips.css';
+
+/* Global Layout Utilities */
+.app-container {
+  width: 100%;
+  max-width: 390px; /* iPhone 13 logical width */
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--color-background);
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 80px; /* Space for bottom nav */
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    max-width: 768px;
+    box-shadow: var(--shadow-medium);
+  }
+}
+
+.section {
+  padding: var(--spacing-24) var(--spacing-20);
+}
+
+.section__title {
+  font-size: 20px;
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-16);
+}
+
+.u-flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
